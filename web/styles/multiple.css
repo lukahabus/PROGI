@@ -1,0 +1,28 @@
+table{
+
+    margin-left: 10%;
+    margin-top: 10%;
+}
+td{
+    width: 15em;
+    font-size: 150%;
+
+}
+tr>td{
+    padding-bottom: 1em;
+}
+.btns{
+    display:flex;
+    flex-flow:row-reverse;
+    
+}
+.btn{
+    padding: 20px 50px;
+    font-size: 95%;
+}
+
+.calendar{
+
+    margin-top: 0.7%;
+    margin-left: 55%;
+}

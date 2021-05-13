@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+body{
+    font-family: 'Nunito Sans', sans-serif;
+
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+button {
+    background-color: rgb(65,105,225);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+button:hover {
+    opacity: 0.8;
+  }
+  
+.container {
+    padding-top: 10%;
+    padding-left: 37%;
+    padding-right: 37%;
+    padding-bottom: 7%;
+    background-color: lightgray;
+  }
+.text-danger{
+    color: rgb(14, 14, 56);
+
+
+}
+.danger-contaier{
+    width:20px;
+    height:30px;
+    display:none;
+
+}

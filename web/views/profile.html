@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="main">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <script src="../scripts/angular.min.js"></script>
+    <script src="../scripts/angular-drag-and-drop.js"></script>
+    <script src="../scripts/angular-route.min.js"></script>
+    <script src="../app.js"></script>
+    <link href="../styles/multiple.css" rel="stylesheet" />
+
+
+    <title>Edit profile</title>
+</head>
+<body ng-controller="ProfileCtrl">
+
+<table>
+    <tr><td>Ime: </td> <td>{{ime}}</td></tr>
+    <tr><td>Prezime: </td> <td>{{prezime}}</td></tr>
+    <tr><td>Korisničko ime: </td> <td>{{korisnickoIme}}</td></tr>
+    <tr><td>Lozinka: </td> <td>{{lozinka}}</td></tr>
+    <tr><td>Broj mobitela: </td> <td><div id="mob">{{brMob}}</div></td></tr>
+    <tr><td>E-mail: </td> <td><div id="mail">{{email}}</div></td></tr>
+
+</table>
+<div class="btns">
+    <button ng-click="zatvori()" id="zatvori">Zatvori</button>
+    <button ng-click="uredi()" id="editProfile">Uredi</button>
+</div>    
+</body>
+</html>

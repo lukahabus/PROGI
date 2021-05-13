@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script data-require="jquery@3.0.0" data-semver="3.0.0" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+    <script data-require="angular.js@1.6.5" data-semver="1.6.5" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script data-require="angular-drag-and-drop-lists@1.2.0" data-semver="1.2.0" src="https://marceljuenemann.github.io/angular-drag-and-drop-lists/angular-drag-and-drop-lists.js"></script>
+
+  <script src="../app.js"></script>
+  <link href="../styles/kanban.css" rel="stylesheet" />
+    <link href="../styles/multiple.css" rel="stylesheet" />
+  </head>
+
+  <body body ng-app="main">
+    <div class="main" ng-controller="kanbanController">
+      <header>
+        <h1 style="padding-left: 5%;">Kanban Ploča: {{firstName}} {{surname}}</h1>
+        <button class="profile-btn" ng-click="openProfile()">
+          <img class="user-icon" src="../images/user.png" />
+          <p>PROFIL</p>
+        </button>
+        <input type="button" value="Meetings" class="other-btn" ng-click="calendar=!calendar"></input>
+        <button class="other-btn" ng-click="logout()">Logout</button>
+      </header>
+      <div class="calendar" ng-show="calendar">
+        <iframe src="https://calendar.google.com/calendar/embed?height=300&amp;wkst=2&amp;bgcolor=%237986CB&amp;ctz=Europe%2FBelgrade&amp;src=d29ybGRwaWlzLmZlci5ockBnbWFpbC5jb20&amp;src=aHIuY3JvYXRpYW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23009688&amp;color=%230B8043&amp;title=Sastanci" style="border-width:0" width="670" height="300" frameborder="0" scrolling="no"></iframe>
+      </div>
+
+      </header>
+      <div class="lists"  dnd-list="lists"
+       dnd-allowed-types="['item']" class="ng-scope"
+       >
+       <div class="list" ng-repeat="item in lists" ng-init="ind = $index"
+        dnd-type="'item'"
+        
+        dnd-moved="lists.splice($index, 1)"
+        dnd-effect-allowed="move"
+        dnd-selected="models.selected = item"
+        ng-class="{'selected': models.selected === item}"
+        >
+        <div class="panel-heading">
+          <h3 class="panel-title">{{item.name}}</h3>
+          <button ng-show="item.name=='BACKLOG'" ng-disabled="userCLevel!='TEAM_LEAD'" class="add-btn" aria-hidden="true" ng-click="addToList()" id="addTask">+</button>
+        </div>
+        <div style="min-height: 30px" dnd-list="item.cards"
+           dnd-drop="dropCallback($index, item, lists, ind)"
+           dnd-allowed-types="['card']"
+          >
+            <div ng-repeat="card in item.cards"
+             dnd-type="'card'"
+             dnd-draggable="card"
+             dnd-effect-allowed="move" 
+             dnd-disable-if="card.assigned!==firstName+' '+surname"
+             dnd-dragstart="dragStart(ind)"
+             dnd-moved="item.cards.splice($index, 1)"
+            >
+            <div class="list-item" id="task"
+            
+            >
+            <div class="item-first">
+              <!--<button class="close-btn" ng-click="item.cards.splice($index, 1)">x</button>-->
+                <p style="font-size: larger;"> {{card.name}}</p>
+              <div class="item-second">
+                <p style="font-size: larger;"> {{card.description}}</p>
+              </div>
+              <div class="item-third">
+                <p style="font-size: larger;">Prioritet zadatka: {{card.priority}}</p>
+              </div>
+              <div class="item-fourth">
+                <p style="font-size: larger;">Rok: {{card.deadline}}</p>
+                <p style="font-size: larger;">Dodjeljeno: {{card.assigned}}</p>
+              </div>
+              <div>
+                <button class="take-btn" ng-disabled="card.assigned!=='Slobodan' || userCLevel=='BOARD' || userCLevel=='COORDINATOR'" aria-hidden="true" ng-click="takeTaskFromList(card)">Take</button>
+                <button class="edit-btn" ng-disabled="card.assigned!==firstName+' '+surname" ng-click="editTask(card)" id="editTask">Edit</button>
+              </div>
+            </div>  
+          </div>
+        </div>  
+        </div>  
+      </div>  
+    </div>  
+  </body>
+
+</html>

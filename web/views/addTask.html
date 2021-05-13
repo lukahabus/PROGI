@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="main">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../scripts/angular.min.js"></script>
+    <script src="../scripts/angular-drag-and-drop.js"></script>
+    <script src="../scripts/angular-route.min.js"></script>
+    <script src="../app.js"></script>
+    <link href="../styles/multiple.css" rel="stylesheet" />
+
+
+    <title>Adding task</title>
+</head>
+<body ng-controller="AddTask">
+
+<table>
+    <tr><td>Name: </td> <td><input ng-model="name" type="text" id="taskName"></td></tr>
+    <tr><td>Description: </td> <td><input ng-model="description" type="text" id="description"></td></tr>
+    <tr><td>Priority: </td> <td><input ng-model="priority" type="text" id="priority"></td></tr>
+    <tr><td>Deadline: </td> <td><input ng-model="deadline" type="text" id="deadline"></td></tr>
+</table>
+<button ng-click="add()" id="add">Add</button>
+</body>
+</html>

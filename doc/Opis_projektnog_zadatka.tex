@@ -1,0 +1,58 @@
+\chapter{\Large Opis projektnog zadatka}
+\par Cilj ovog projekta je razviti platformu za upravljanje zadacima, koji se razvijaju agilnom metodologijom, na projektima unutar neke tvrtke. Platforma se temelji na osnovama metodologija Scrum i Kanban. 
+\par Scrum je radni okvir koji pomaže zajedničkom radu timova. Opisuje skup sastanaka, alata i uloga koji zajedno djeluju kako bi pomogli timovima da upravljaju svojim radom i kvalitetno ga strukturiraju. Potiče timove da se samoorganiziraju prilikom rada na problemu i uče kroz iskustva te da razmišljaju o svojim usponima i padovima kako bi se kontinuirano mogli usavršti. Zbog toga što je usmjeren na kontinuirano usavršavanje često ga se smatra agilnim okvirom za upravljanje projektima, iako zapravo ne može biti agilan jer je potrebna posvećenost cijelog tima da bi se promijenio način na koji razmišljaju o davanju vrijednosti korisnicima. Scrum je heuristički okvir jer se temelji na kontinuiranom učenju i prilagodbi. Priznaje da na početku projekta tim ne zna sve i da će se razvijati kroz radno iskustvo. Strukturiran je na način da pomogne timovima da se prirodno prilagode promjenjivim uvjetima i zahtjevima korisnika tako da se ponovno određuju prioriteti i postoje kratki ciklusi objavljivanja kako bi tim mogao stalno usvajati znanja i usavršavati se. U Scrumu postoje tri artefakta. Artefakti su nešto što mi izrađujemo, poput alata za rješavanje problema. Ta tri artefakta su: 
+\begin{itemize}
+			\item product backlog - glavni popis poslova
+			\item sprint backlog - popis stavki, korisničkih priča ili ispravaka pogreški
+			\item increment - cilj sprinta, korisni krajnji proizvod sprinta
+		\end{itemize}
+U timu Scrum-a trebaju postojati tri posebne uloge:
+\begin{itemize}
+			\item vlasnik proizvoda - fokusiran na razumijevanje zahtjeva poslovanja, tržišta i kupaca, određuju prioritet poslova 
+			\item Scrum master - glavni voditelj, planira potrebne resurse, podučava timove i vlasnike proizvoda te pomaže pri optimizatici tansparentnosti i tijeka isporuke 
+			\item razvojni tim - 5 do 7 članova, upravlja planom za svaki sprint, predviđa vrijeme potrebno za posao
+		\end{itemize}
+\par Kanban je radni okvir koji se koristi za razvoj agilnog softvera. Zahtjeva punu transparentnost posla. Elementi posla prikazani su vizualno na kanban ploči kako bi se članovima tima u svakom momentu omogućio uvid u stanje svakog od dijelova posla. Kanban ploča je alat koji se koristi za vizualizaciju i optimizaciju tijeka rada među timovima. Funkcije kanban ploče uz vizualizaciju rada su standardizacija tijeka rada tima te prepoznavanje i rješavanje ovisnosti i blokatora. Kanban ploča ima tijek rada u tri koraka:
+\begin{itemize}
+			\item To Do
+			\item In Progress
+			\item Done
+	\end{itemize}
+Kanban timovi imaju svaki element posla predstavljen kao posebnu karticu na ploči. Glavna svrha kartica je omogućiti članovima da prate napredak rada na što zorniji način. Kanban kartice sadrže ključne informacije o elementu posla kojeg predstavljaju. Kanban svim time omogućuje fleksibilnost planiranja, jednom kad tim dovrši neki element posla pređe se na sljedeći element posla s vrha product backloga. Vlasnik proizvoda ima mogućnost prioriteno odrediti redoslijed u product backlogu i sve dok on na njegovom vrhu drži najvažnije elemente posla nema straha od toga da se tvrtki ne isporučuje maksimalna vrijednost. Samim time nema potrebe za promjenama postavljene duljine rada. 
+\par Platforma omogućuje grupiranje zadataka, definiranih na projektu, u product backlog. Iz njega se u svakoj iteraciji projekta odabire skupina zadataka na kojima će se raditi i oni napreduju kroz faze te se za svaki zadatak prati napredak. Faze napredovanja su:
+\begin{itemize}
+			\item oblikovanje
+			\item implementacija 
+			\item ispitivanje
+			\item puštanje u pogon
+		
+		\end{itemize} 
+Također uz zadatke je moguće vezati probleme koji se pojavljuju tijekom njihovog rješavanja. Zadatak može biti preuzet od strane najviše jednog člana tima. Svaki zadatak ima:
+\begin{itemize}
+			\item svoj ID
+			\item sažeti naziv 
+			\item detaljan opis
+			\item prioritet
+			\item krajnji rok završetka
+		
+		\end{itemize} 
+\par Projekti su definirani tako da se rade u timovima od 5 do 8 članova, gdje su članovi tima razvojni inženjeri i voditelj tima. Više timova može biti udruženo u radnu skupinu koju vodi koordinator. Koordinatori s voditeljima i voditelj s članovima svog tima komuniciraju preko Google Calendar-a koji je integriran u platformu.
+
+\par Platformi mogu pristupiti samo registrirani korisnici koji su zaposlenici tvrtke koja je vlasnik projekta. Korisnik je registriran ako je dodan u bazu podataka od strane admina baze. Registrirani korisnik prijavljuje se pomoću korisničkog imena i lozinke. Nakon uspješne prijave u sustav korisniku se prikazuje inačica Kanban ploče, koja služi za vizualizaciju zadatka i njihovom prolasku kroz faze na projektu. Što je korisniku prikazano na Kanban ploči ovisni o tome na kojoj je funkciji unutar projekta.
+\par \underline{Uprava tvrtke} je vlasnik projekta. Prilikom prijave u aplikaciju upravi tvrtke je na Kanban ploči omogućen prikaz svih projekata tvrtke tako da može pratiti njihov napredak. Od ponuđenih projekata može odabrati konkretni projekt te zatim pratiti razvoj događaja na njegovoj Kanban ploči. Također unutar projekta može odabrati određeni tim i tako dobiti uvid u njegovu Kanban ploču. Iako joj je omogućeno praćenje svih projekata, direktno ne sudjeluje u izradi niti jednog projekta.
+\par \underline{Zaposlenik} je svatko tko radi u tvrtki na bilo kojoj funkciji te je samim time registriran u bazi podataka. Može se prijaviti u aplikaciju sa svojim korisničkim imenom i lozinkom. Omogućen je prikaz njegovog profila na kojem su prikazani:
+\begin{itemize}
+			\item njegovo ime
+			\item prezime
+			\item broj mobitela
+			\item email
+		
+		\end{itemize}
+kako bi se s njim moglo stupiti u kontakt. On može mijenjati svoj broj mobitela i email te postaviti novu lozinku.
+\par \underline{Koordinator} je zaposlenik u tvrtki koji može vidjeti sve zadatke i njihovo trenutno stanje te tako pratiti napredak projekta. Od ponuđenih timova unutar projekta može odabrati konkretni i tako dobiti uvid u njegovu Kanban ploču. Na temelju viđenog može dogovarati sastanke s voditeljima timova. Kako ima uvid u sve timove na projektu, omogućeno mu je stvaranje radnih skupina koje se sastoje od više timova kojima on upravlja. Nije mu omogućeno dodavati i uređivati zadatke kao ni utjecati na njihovo izvođenje. 
+\par \underline{Voditelj tima} je zaposlenik u tvrtki koji je dio jednog od timova na projektu i njega predvodi. Zadužen je za stvaranje i održavanje backloga te je jedina osoba u timu koja ima pravo mijenjati backlog. Dozvoljeno mu je preuzimanje jednog ili više zadataka s backloga i rad na njima. Ako je preuzeo neki od zadataka na sebe odgovoran je za izvještavanje o napretku zadatka kroz faze te o problemima na koje je naišao prilikom rješavanja. Ima pristup samo Kanban ploči svojeg tima te tako može pratiti razvoj. Na temelju viđenog može sazvati sastanak s članovima svog tima te zabilježiti termin sastanka u raspored sastanaka. Jedan voditelj može voditi samo jedan tim. Ima uvid u raspored sastanaka s koordinatorom. Prema dobivenim zaslugama kao voditelj može biti promaknut u koordinatora. 
+\par \underline{Razvojni inženjer} je zaposlenik u tvrtki koji je dio samo jednog od timova na projektu. Kao članu tima omogućeno mu je preuzimanje jednog ili više zadataka iz backloga te je nakon preuzimanja odgovoran za izvještavanje o napredovanju zadatka kroz faze i problemima s kojima se suočava prilikom rješavanja. Ima uvid u raspored sastanaka s voditeljem tima. U skladu sa svojim zaslugama može biti promaknut u voditelja tima.
+
+
+
+

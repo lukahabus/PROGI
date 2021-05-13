@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="main">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <script src="../scripts/angular.min.js"></script>
+    <script src="../scripts/angular-drag-and-drop.js"></script>
+    <script src="../scripts/angular-route.min.js"></script>
+    <script src="../app.js"></script>
+    <link href="../styles/multiple.css" rel="stylesheet" />
+
+
+    <title>Edit profile</title>
+</head>
+<body ng-controller="EditCtrl">
+
+<table>
+    <tr><td>Ime: </td> <td><input ng-model="ime" type="text"></td></tr>
+    <tr><td>Prezime: </td> <td><input ng-model="prezime" type="text"></td></tr>
+    <tr><td>Korisničko ime: </td> <td><input ng-model="korisnickoIme" type="text" id="korIme"></td></tr>
+    <tr><td>Lozinka: </td> <td><input ng-model="lozinka" type="text"></td></tr>
+    <tr><td>Broj mobitela: </td> <td><input ng-model="brMob" type="text" id="brMob"></td></tr>
+    <tr><td>E-mail: </td> <td><input ng-model="email" type="text" id="eMail"></td></tr>
+
+</table>
+<button ng-click="spremi()" id="spremi">Spremi</button>
+</body>
+</html>

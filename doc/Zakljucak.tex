@@ -1,0 +1,32 @@
+\chapter{Zaključak i budući rad}
+	Naš zadatak bio je izraditi agilnu platformu s kanban pločom koju bi neka zamišljena tvrtka koristila.
+	
+	Ideja kanban ploče za upravljanje projektima je sveprisutna u poslovnom svijetu, a dostupna je u alatima poput \underline{Trello}\footnote{\url{https://trello.com/}} i \underline{Asana}\footnote{https://asana.com/}.
+	
+	Projekt smo proveli u tri faze:
+	\begin{enumerate}
+		\item početna razrada funkcionalnih i nefunkcionalnih zahtjeva
+		\item implementacija zahtjeva i daljnje razrađivanje
+		\item testiranje i završno dokumentiranje
+	\end{enumerate} 
+
+	Na početku prve faze upoznavali smo ideju aplikacije, razrađivali smo funkcionalne zahtjeve i dogovarali se što sve aplikacija može i treba raditi. U retrospekciji, ova faza provedena je kaotično jer članovi tima još nisu bili svjesni težine projekta i količine posla, a da se provela kvalitetnije implementacija bi bila konceptualno lakša. U prvoj fazi smo se također počeli upoznavati s tehnologijama koje smo koristili. Ni jedan od članova tima nije bio u potpunosti upoznat s tim tehnologijama. Naučili smo da u stvarnosti, prije izrade samog projekta, potrebno je naučiti kako učiti alate, a zatim i naučiti sam alat.
+	
+	U drugoj fazi projekta krenuli smo sa implementacijom, što je na početku teklo jako sporo jer još nismo bili upoznati s alatima, no kako je vrijeme prolazilo tako smo postajali bolji i implementirali smo zahtjeve sve brže. Također, u ovoj fazi uvidjeli smo propuste u definicijama funkcionalnih i nefunkcionalnih zahtjeva, pa smo naučili biti precizniji u svojim definicijama i uzimati više slučajeva u obzir. 
+	
+	U trećoj, odnosno posljednjoj fazi, nakon implementacije programskog rješenja, dovršili smo dokumentaciju projekta. Ovaj korak nam je dodatno pomogao u shvaćanju obujma našeg projekta, i ukazao nam na arhitekturalne probleme koje nismo predvidjeli. Također, testiranjem smo ustanovili da sustav ima par grešaka, a najveća od tih je da REST API vraća prvi ugnježđeni objekt u potpunosti, a sve ostale vraća samo preko njihovih identifikatora.
+	
+	Članovi tima su prije projekta bili upoznati s Javom i NodeJS-om, pa bi odabirom tih tehnologija umjesto AngularJS-a pomogao pri ubrzanju razvoja aplikacije. 
+	
+	Naučili smo važnost koordinacije i komunikacije među članovima tima. Nekad članovi nisu bili dobro koordinirani pa bi jedni implementirali funkcionalnost na ovaj, a drugi na onaj način. Naučili smo meke vještine povezane s projektima općenito, kao što je korištenje alata \texttt{git}, pisanje značajnih commit poruka, korištenje GitLab-a, te poštivanje unaprijed definiranih obrazaca programiranja. 
+	
+	Najviše od svega, naučili smo značenje vremenske koordiniranosti u grupnom radu. Projekti poput ovoga vremenski su zahtjevni i ponekad se može dogoditi da jedan modul programskog rješenja kasni za drugim, pa drugi ne može nastaviti svoj razvoj. U ovakvim slučajevima, iznimno je važno vremenski se uskladiti unutar tima kako bi se takve neučinkovitosti izbjegle. 
+	
+	Od definiranih funkcionalnih zahtjeva, uspjeli smo implementirati korisnički login, dodavanje i mijenjanje zadataka, preuzimanje zadataka, pregled kanban ploča timova od strane uprave i koordinatora, integraciju GoogleCalendar-a za sastanke i izmjenu profila zaposlenika.
+	
+	Prije spomenuti bug primijetili smo tek na kraju izrade projekta i nismo imali dovoljno vremena kako bi ga popravili. Bug smo primijetili tako kasno jer smo do tada rukovali sa lijepim podacima i nismo imali priliku uvidjeti pogrešku. Iz ovoga smo naučili da temeljito testiranje sustava treba provoditi od samog početka, koliko je to god moguće. 
+	
+	U budućnosti bismo mogli popraviti taj bug, zatim mogli bismo omogućiti upravljanje sjednicom, ćime bismo postigli mogućnost da više korisnika istovremeno koristi našu aplikaciju bez problema, i u više sjednica odjednom. Također, mogli bismo prolijepšati korisničko sučelje, implementirati više statusa zadataka, proširiti profil korisnika da sadrži druge korisničke podatke, omogućiti upravi pregled profila i aktivnosti pojedinih zaposlenika, i slično.
+
+	Zaključno, zahvaljujući iskustvima i znanjima koja smo stekli na ovom projektu, kad bismo krenuli iz početka, napravili bismo mnogo bolji projekt mnogo brže.
+	\eject 

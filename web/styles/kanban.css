@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: url("../images/background.jpg");
+  top: -330px;
+  position:relative;
+  background-size: cover;
+}
+
+.main{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-flow: column;
+  padding-right:2%;
+}
+header{
+  display: flex;
+  height:70px;
+  font-family: 'Nunito Sans', sans-serif;
+  flex-flow:row
+}
+.lists{
+  display: flex;
+  flex: 1;
+  width: 100%;
+  flex-wrap :wrap;
+  text-align: justify;
+  text-align-last: center;
+  margin-block-start: 15px;
+}
+.lists .list{
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  box-sizing: border-box;
+  width: 23%;
+  background-color:rgba(224,245,179,0.5);
+  background-size: auto;
+  margin: 0 15px;
+  padding: 8px;
+  transition: all 0.2s linear;
+  border-color: wheat;
+  border-style: double;
+  border-radius: 8px;
+  resize:both;
+  display: inline-block;
+}
+.lists .list .list-item{
+  background-color: khaki;
+  border-radius: 8px;
+  text-align: center;
+  margin: 8px 0px;
+  padding: 5px;
+  display:grid;
+  grid-template-rows: 1fr;
+  cursor: pointer;
+}
+.panel-heading{
+  height: 7%;
+  width: 100%;
+  display:flex;
+  flex-flow: row; 
+  font-family: 'Nunito Sans', sans-serif;
+  padding-bottom: 20px;
+}
+/*.close-btn{
+  padding:5px 15px;
+  height: 70%;
+  margin-left:auto;
+  display:inline-block;
+  border-radius: 20px;
+  border-color: wheat;
+  outline: none;
+}*/
+.add-btn,.take-btn, .edit-btn{
+  padding:5px 10px 5px 10px;
+  height: 70%;
+  margin-left:auto;
+  display:inline-block;
+  border-radius: 20px;
+  border-color: wheat;
+  outline: none;
+}
+
+.add-btn{
+  padding:5px 15px 20px 15px;
+}
+
+.ng-scope{
+  display:flex;
+  flex-direction: column;
+  min-height: 70px;
+}
+.close-btn, .take-btn, .edit-btn{
+  border-style: dashed;
+  border-color: darkorange;
+}
+.profile-btn{
+margin-left: auto;
+width:auto;
+width:7%;
+background-color: transparent;
+font-family: 'Nunito Sans', sans-serif;
+font-weight: bolder;
+border-color: transparent;
+font-size: 100%;
+outline: none;
+}
+.user-icon{
+  width: 40%;
+  height: 70%;
+  margin-left: auto;
+  border-color: wheat;
+  border-style: solid;
+  border-radius: 50%;
+}
+
+.other-btn{
+  padding:5px 15px;
+  height: 70%;
+  margin-left:20px;
+  display:inline-block;
+  border-radius: 20px;
+  border-color: wheat;
+  outline: none;
+}
+
+.item-first{
+  display: flex;
+  flex-flow: column;
+}
+
